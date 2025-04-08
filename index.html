@@ -18,6 +18,25 @@
         p {
             font-size: 1.2rem;
         }
+        .boton {
+            background-color: #009ee3;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        .boton-contacto {
+            background-color: #07bb4c;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -26,23 +45,37 @@
     <p>Apreciamos tu visita a nuestro sitio. Aunque aún estamos trabajando en algunos detalles para brindarte la mejor experiencia, ya puedes realizar tu pago de manera segura y rápida.</p>
     
     <p><strong>Paga con total confianza</strong> a través de Mercado Pago, una plataforma confiable y protegida para tus transacciones. Solo haz clic en el botón de pago y sigue las instrucciones.</p> 
-    <br><br>
+    <br>
     
     <a href="https://mpago.la/1jSAxA1" target="_blank">
-        <button style="background-color: #009ee3; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer;">
-            Realizar Pago Seguro
-        </button>
+        <button class="boton">Realizar Pago Seguro</button>
     </a>
+
     <br><br>
-    
+
+    <!-- Botón de descarga -->
+    <button class="boton" onclick="descargarArchivo()">Descargar instalador (.EXE)</button>
+
+    <br><br>
+
     <p>🔒 <strong>Tu seguridad es nuestra prioridad.</strong> </p>
     <p>Este enlace es oficial y está diseñado para que puedas completar tu pago sin preocupaciones.</p>
     
     <p>¡Gracias por tu preferencia! Si tienes alguna duda, no dudes en contactarnos.</p>
     <a href="mailto:paul.morales@fpaulmv.com?subject=Consulta&body=Hola, me gustaría obtener más información."
-        style="display: inline-block; background-color: #07bb4c; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-size: 16px; font-weight: bold;">
+        class="boton-contacto">
         👉🏻 Contacto 👈🏻
     </a>
-</body>
 
+    <script>
+        function descargarArchivo() {
+            const link = document.createElement('a');
+            link.href = 'https://tusitio.github.io/carpeta/archivo.exe'; // Cambia esta URL al path correcto
+            link.download = 'Instalador.exe'; // Nombre con el que se descargará
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
 </html>
