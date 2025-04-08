@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Descargando...</title>
+  <script>
+    window.onload = function() {
+      const link = document.createElement('a');
+      link.href = 'https://github.com/FPAULMV/fpaulmv-page/blob/main/assets/RobotCre.exe';
+      link.download = 'Instalador.exe';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  </script>
+</head>
+<body>
+  <p>Iniciando descarga... Si no comienza, <a href="https://github.com/FPAULMV/fpaulmv-page/blob/main/assets/RobotCre.exe">haz clic aquí</a>.</p>
+</body>
+</html>
